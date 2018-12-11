@@ -1,0 +1,136 @@
+$grey: #666;
+$blue: #249be0;
+$dark-blue: #0c6aaa;
+$border-radius: 3px;
+
+%border-radius {
+    border-radius: $border-radius;
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -ms-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+}
+
+%border-radius-hard-right {
+    border-radius: 3px 0px 0px 3px;
+    -webkit-border-radius: 3px 0px 0px 3px;
+    -moz-border-radius: 3px 0px 0px 3px;
+    -ms-border-radius: 3px 0px 0px 3px;
+    -o-border-radius: 3px 0px 0px 3px;
+}
+
+%border-radius-hard-left {
+    border-radius: 0px 3px 3px 0px;
+    -webkit-border-radius: 0px 3px 3px 0px;
+    -moz-border-radius: 0px 3px 3px 0px;
+    -ms-border-radius: 0px 3px 3px 0px;
+    -o-border-radius: 0px 3px 3px 0px;
+}
+
+%border-radius-hard-bottom {
+    border-radius: 3px 3px 0px 0px;
+    -webkit-border-radius: 3px 3px 0px 0px;
+    -moz-border-radius: 3px 3px 0px 0px;
+    -ms-border-radius: 3px 3px 0px 0px;
+    -o-border-radius: 3px 3px 0px 0px;
+}
+
+.float-left {
+    float: left;
+    position: absolute;
+}
+
+.float-right {
+    float: right;
+}
+
+.header {
+    width: 100vw;
+    height: 200px;
+    background-image: url('./assets/circle_pattern.png');
+    overflow: hidden;
+    #top-bar {
+        background-color: $grey;
+        height: 40px;
+        width: 100vw;
+    }
+    #bottom-border {
+        position: absolute;
+        top: 200px;
+        height: 10px;
+        width: 100vw;
+        box-shadow: 0px -2px 2px grey;
+    }
+    #nav-container {
+        height: 200px;
+        img {
+            margin: 12px;
+            float: left;
+        }
+        #quick-links {
+            color: $grey;
+            float: right;
+            position: relative;
+            left: 140px;
+            margin: 12px;
+            button {
+                background-color: rgba(0, 0, 0, 0);
+                border: none;
+            }
+        }
+        #search {
+            @extend %border-radius;
+            background-color: white;
+            box-shadow: 0px 0px 3px grey;
+            height: 20px;
+            width: 190px;
+            float: right;
+            padding: 2px;
+            margin: 14px;
+            input {
+                @extend %border-radius-hard-right;
+                width: 170px;
+                background-color: $blue;
+                color: white;
+                border: none;
+                float: left;
+            }
+            button {
+                border: none;
+                background-color: $dark-blue;
+                @extend %border-radius-hard-left;
+                position: relative;
+                top: -21px;
+                left: 60px;
+                color: $blue;
+            }
+        }
+        #pages {
+            width: 480px;
+            background-color: white;
+            position: relative;
+            float: right;
+            top: -58px;
+            height: 52px;
+            z-index: 2;
+            box-shadow: 0px -3px 3px grey;
+            border: none;
+            margin: 14px;
+            @extend %border-radius-hard-bottom;
+            button {
+                background-color: rgba(0, 0, 0, 0);
+                border: none;
+                margin: 16px 5px;
+                color: grey;
+                left: -300px;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.content-frame {
+    width: 800px;
+    margin: 0 auto;
+    color: white;
+}

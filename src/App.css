@@ -1,32 +1,129 @@
-.App {
-  text-align: center;
+.header #nav-container #search {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.header #nav-container #search input {
+  border-radius: 3px 0px 0px 3px;
+  -webkit-border-radius: 3px 0px 0px 3px;
+  -moz-border-radius: 3px 0px 0px 3px;
+  -ms-border-radius: 3px 0px 0px 3px;
+  -o-border-radius: 3px 0px 0px 3px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header #nav-container #search button {
+  border-radius: 0px 3px 3px 0px;
+  -webkit-border-radius: 0px 3px 3px 0px;
+  -moz-border-radius: 0px 3px 3px 0px;
+  -ms-border-radius: 0px 3px 3px 0px;
+  -o-border-radius: 0px 3px 3px 0px;
+}
+
+.header #nav-container #pages {
+  border-radius: 3px 3px 0px 0px;
+  -webkit-border-radius: 3px 3px 0px 0px;
+  -moz-border-radius: 3px 3px 0px 0px;
+  -ms-border-radius: 3px 3px 0px 0px;
+  -o-border-radius: 3px 3px 0px 0px;
+}
+
+.float-left {
+  float: left;
+  position: absolute;
+}
+
+.float-right {
+  float: right;
+}
+
+.header {
+  width: 100vw;
+  height: 200px;
+  background-image: url("./assets/circle_pattern.png");
+  overflow: hidden;
+}
+.header #top-bar {
+  background-color: #666;
+  height: 40px;
+  width: 100vw;
+}
+.header #bottom-border {
+  position: absolute;
+  top: 200px;
+  height: 10px;
+  width: 100vw;
+  box-shadow: 0px -2px 2px grey;
+}
+.header #nav-container {
+  height: 200px;
+}
+.header #nav-container img {
+  margin: 12px;
+  float: left;
+}
+.header #nav-container #quick-links {
+  color: #666;
+  float: right;
+  position: relative;
+  left: 140px;
+  margin: 12px;
+}
+.header #nav-container #quick-links button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.header #nav-container #search {
+  background-color: white;
+  box-shadow: 0px 0px 3px grey;
+  height: 20px;
+  width: 190px;
+  float: right;
+  padding: 2px;
+  margin: 14px;
+}
+.header #nav-container #search input {
+  width: 170px;
+  background-color: #249be0;
+  color: white;
+  border: none;
+  float: left;
+}
+.header #nav-container #search button {
+  border: none;
+  background-color: #0c6aaa;
+  position: relative;
+  top: -21px;
+  left: 60px;
+  color: #249be0;
+}
+.header #nav-container #pages {
+  width: 480px;
+  background-color: white;
+  position: relative;
+  float: right;
+  top: -58px;
+  height: 52px;
+  z-index: 2;
+  box-shadow: 0px -3px 3px grey;
+  border: none;
+  margin: 14px;
+}
+.header #nav-container #pages button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  margin: 16px 5px;
+  color: grey;
+  left: -300px;
+  display: inline-block;
+}
+
+.content-frame {
+  width: 800px;
+  margin: 0 auto;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*# sourceMappingURL=App.css.map */
