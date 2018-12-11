@@ -139,9 +139,16 @@ $border-radius: 3px;
     color: white;
 }
 
-.view-placeholder {
-    background-color: $blue;
-    height: 1200px;
+.main-content {
+    height: 500px;
+    .content-frame {
+        height: 500px;
+        width: 1000px;
+    }
+    img {
+        height: 500px;
+        width: 1000px;
+    }
 }
 
 .footer {

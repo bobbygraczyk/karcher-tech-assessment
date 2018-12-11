@@ -129,9 +129,16 @@
   color: white;
 }
 
-.view-placeholder {
-  background-color: #249be0;
-  height: 1200px;
+.main-content {
+  height: 500px;
+}
+.main-content .content-frame {
+  height: 500px;
+  width: 1000px;
+}
+.main-content img {
+  height: 500px;
+  width: 1000px;
 }
 
 .footer {
