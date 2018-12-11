@@ -44,11 +44,15 @@
   height: 200px;
   background-image: url("./assets/circle_pattern.png");
   overflow: hidden;
+  margin-bottom: 10px;
 }
 .header #top-bar {
   background-color: #666;
   height: 40px;
   width: 100vw;
+}
+.header #top-bar h3, .header #top-bar h4 {
+  margin: 6px 0px 0px 0px;
 }
 .header #bottom-border {
   position: absolute;
@@ -68,7 +72,6 @@
   color: #666;
   float: right;
   position: relative;
-  left: 140px;
   margin: 12px;
 }
 .header #nav-container #quick-links button {
@@ -95,9 +98,9 @@
   border: none;
   background-color: #0c6aaa;
   position: relative;
-  top: -21px;
-  left: 60px;
+  top: -17px;
   color: #249be0;
+  float: right;
 }
 .header #nav-container #pages {
   width: 480px;
@@ -124,6 +127,29 @@
   width: 800px;
   margin: 0 auto;
   color: white;
+}
+
+.view-placeholder {
+  background-color: #249be0;
+  height: 1200px;
+}
+
+.footer {
+  height: 260px;
+  background-color: #313131;
+  width: 100vw;
+  color: white;
+}
+.footer #footer-banner {
+  height: 60px;
+  background-color: #0c6aaa;
+  background-image: url("./assets/circle_pattern.png");
+  background-position: 0px -10px;
+}
+.footer #footer-banner h2 {
+  margin: 0;
+  position: relative;
+  top: 12px;
 }
 
 /*# sourceMappingURL=App.css.map */

@@ -1,4 +1,5 @@
 $grey: #666;
+$dark-grey: #313131;
 $blue: #249be0;
 $dark-blue: #0c6aaa;
 $border-radius: 3px;
@@ -49,10 +50,14 @@ $border-radius: 3px;
     height: 200px;
     background-image: url('./assets/circle_pattern.png');
     overflow: hidden;
+    margin-bottom: 10px;
     #top-bar {
         background-color: $grey;
         height: 40px;
         width: 100vw;
+        h3, h4 {
+            margin: 6px 0px 0px 0px;
+        }
     }
     #bottom-border {
         position: absolute;
@@ -71,7 +76,6 @@ $border-radius: 3px;
             color: $grey;
             float: right;
             position: relative;
-            left: 140px;
             margin: 12px;
             button {
                 background-color: rgba(0, 0, 0, 0);
@@ -100,9 +104,9 @@ $border-radius: 3px;
                 background-color: $dark-blue;
                 @extend %border-radius-hard-left;
                 position: relative;
-                top: -21px;
-                left: 60px;
+                top: -17px;
                 color: $blue;
+                float: right;
             }
         }
         #pages {
@@ -133,4 +137,27 @@ $border-radius: 3px;
     width: 800px;
     margin: 0 auto;
     color: white;
+}
+
+.view-placeholder {
+    background-color: $blue;
+    height: 1200px;
+}
+
+.footer {
+    height: 260px;
+    background-color: $dark-grey;
+    width: 100vw;
+    color: white;
+    #footer-banner {
+        height: 60px;
+        background-color: $dark-blue;
+        background-image: url('./assets/circle_pattern.png');
+        background-position: 0px -10px;
+        h2 {
+            margin: 0;
+            position: relative;
+            top: 12px;
+        }
+    }
 }
