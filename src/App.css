@@ -244,7 +244,7 @@ button:hover {
   height: auto;
   background-image: url("./assets/texture.png");
   padding: 40px 0px;
-  box-shadow: inset 0px 0px 16px #666;
+  box-shadow: inset 0px 2px 8px #666;
 }
 .main-content #card-section #card-one img, .main-content #card-section #card-two img, .main-content #card-section #card-three img {
   height: 170px;
@@ -393,6 +393,7 @@ button:hover {
   display: inline-block;
   color: #444;
   padding: 5px;
+  margin-top: 20px;
 }
 .main-content #welcome-text h4, .main-content #showroom-links h4 {
   color: #0c6aaa;
@@ -401,14 +402,16 @@ button:hover {
 }
 .main-content #welcome-text {
   width: 64%;
+  margin-left: 14px;
 }
 .main-content #showroom-links {
-  width: 30%;
+  width: 28%;
   color: #444;
   border-left: 1px solid rgba(0, 0, 0, 0.2);
   position: relative;
-  top: 30px;
+  top: 6px;
   padding-left: 20px;
+  line-height: 1;
 }
 .main-content #showroom-links a {
   font-family: "Myriad Pro";
@@ -419,21 +422,52 @@ button:hover {
 }
 
 .footer {
-  height: 260px;
+  height: 320px;
   background-color: #313131;
   width: 100vw;
   color: white;
 }
 .footer #footer-banner {
   height: 60px;
-  background-color: #0c6aaa;
+  background-color: #157ec0;
   background-image: url("./assets/circle_pattern.png");
   background-position: 0px -10px;
+  box-shadow: inset 0px 2px 12px #313131;
 }
 .footer #footer-banner h2 {
   margin: 0;
   position: relative;
-  top: 12px;
+  top: 10px;
+  font-size: 30px;
+}
+.footer #tag {
+  margin: 32px 0px;
+  font-family: "Arial";
+  font-size: 12px;
+  width: fit-content;
+  display: inline-block;
+}
+.footer #company-links, .footer #manufacturer-links {
+  width: 160px;
+  float: right;
+  margin: 32px 0px;
+  font-family: "Arial";
+  font-size: 12px;
+}
+.footer #company-links table, .footer #manufacturer-links table {
+  border-collapse: collapse;
+  margin-top: 8px;
+  width: 120px;
+}
+.footer #company-links tr, .footer #manufacturer-links tr {
+  height: 26px;
+  border-bottom: 1px dotted white;
+}
+.footer #company-links small, .footer #manufacturer-links small {
+  font-size: 12px;
+}
+.footer #company-links a:visited, .footer #manufacturer-links a:visited {
+  color: white;
 }
 
 /*# sourceMappingURL=App.css.map */

@@ -257,7 +257,7 @@ button:hover {
         height: auto;
         background-image: url('./assets/texture.png');
         padding: 40px 0px;
-        box-shadow: inset 0px 0px 16px $grey;
+        box-shadow: inset 0px 2px 8px $grey;
         #card-one, #card-two, #card-three {
             @extend %card-common;
             img {
@@ -416,6 +416,7 @@ button:hover {
         display: inline-block;
         color: #444;
         padding: 5px;
+        margin-top: 20px;
         h4 {
             color: $dark-blue;
             font-size: 22px;
@@ -424,14 +425,16 @@ button:hover {
     }
     #welcome-text {
         width: 64%;
+        margin-left: 14px;
     }
     #showroom-links {
-        width: 30%;
+        width: 28%;
         color: #444;
         border-left: 1px solid rgba(0, 0, 0, 0.2);
         position: relative;
-        top: 30px;
+        top: 6px;
         padding-left: 20px;
+        line-height: 1;
         a {
             font-family: "Myriad Pro";
             font-size: 14px;
@@ -443,19 +446,50 @@ button:hover {
 }
 
 .footer {
-    height: 260px;
+    height: 320px;
     background-color: $dark-grey;
     width: 100vw;
     color: white;
     #footer-banner {
         height: 60px;
-        background-color: $dark-blue;
+        background-color: #157ec0;
         background-image: url('./assets/circle_pattern.png');
         background-position: 0px -10px;
+        box-shadow: inset 0px 2px 12px $dark-grey;
         h2 {
             margin: 0;
             position: relative;
-            top: 12px;
+            top: 10px;
+            font-size: 30px;
+        }
+    }
+    #tag {
+        margin: 32px 0px;
+        font-family: "Arial";
+        font-size: 12px;
+        width: fit-content;
+        display: inline-block;
+    }
+    #company-links, #manufacturer-links {
+        width: 160px;
+        float: right;
+        margin: 32px 0px;
+        font-family: "Arial";
+        font-size: 12px;
+        table { 
+            border-collapse: collapse; 
+            margin-top: 8px;
+            width: 120px;
+        }
+        tr {
+            height: 26px;
+            border-bottom: 1px dotted white;
+        }
+        small {
+            font-size: 12px;
+        }
+        a:visited {
+            color: white;
         }
     }
 }
