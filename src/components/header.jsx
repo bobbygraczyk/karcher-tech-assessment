@@ -24,6 +24,8 @@ class Header extends Component {
                     <div id="search">
                         <input type="text" value="Keyword"></input>
                         <button>SEARCH</button>
+                        <div id="chat-triangle-inner" />
+                        <div id="chat-triangle-outer" />
                     </div>
                     <div id="pages">
                         <button>KITCHEN</button>

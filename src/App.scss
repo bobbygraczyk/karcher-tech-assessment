@@ -45,6 +45,12 @@ $border-radius: 3px;
     float: right;
 }
 
+body {
+    font-family: "Candara";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 .header {
     width: 100vw;
     height: 200px;
@@ -55,8 +61,16 @@ $border-radius: 3px;
         background-color: $grey;
         height: 40px;
         width: 100vw;
-        h3, h4 {
-            margin: 6px 0px 0px 0px;
+        h4, h3 {
+            margin: 10px 0px 0px 0px;
+            font-size: 18px;
+            font-weight: 200;
+        }
+        h3 {
+            color: $blue;
+            font-family: "Myriad Pro";
+            font-size: 24px;
+            font-weight: 200;
         }
     }
     #bottom-border {
@@ -65,7 +79,7 @@ $border-radius: 3px;
         top: 200px;
         height: 10px;
         width: 100vw;
-        box-shadow: 0px -2px 2px grey, 0px 4px 4px #444444;
+        box-shadow: 0px -2px 12px grey, 0px 4px 12px #444444;
     }
     #nav-container {
         height: 200px;
@@ -77,38 +91,74 @@ $border-radius: 3px;
             color: $grey;
             float: right;
             position: relative;
-            margin: 12px;
+            padding: 10px;
+            margin-top: 12px;
             button {
                 background-color: rgba(0, 0, 0, 0);
                 border: none;
+                font-family: "Myriad Pro";
+                font-size: 16px;
+                font-weight: 100;
+                letter-spacing: 1px;
+                color: $grey;
             }
         }
         #search {
             @extend %border-radius;
             background-color: white;
             box-shadow: 0px 0px 3px grey;
-            height: 20px;
-            width: 190px;
+            height: 26px;
+            width: 320px;
             float: right;
-            padding: 2px;
-            margin: 14px;
+            padding: 4px;
+            margin: 4px 16px;
             input {
                 @extend %border-radius-hard-right;
-                width: 170px;
+                width: 236px;
+                height: 22px;
                 background-color: $blue;
                 color: white;
                 border: none;
                 float: left;
+                position: relative;
+                padding-left: 4px;
+                font-family: "Myriad Pro";
+                font-size: 16px;
             }
             button {
                 border: none;
+                width: 80px;
+                height: 24px;
                 background-color: $dark-blue;
                 @extend %border-radius-hard-left;
                 position: relative;
-                top: -17px;
-                color: $blue;
+                color: rgb(95, 183, 255);
                 float: right;
+                font-family: "Myriad Pro";
+                padding-top: 2px;
             }
+            #chat-triangle-inner {
+                width: 0;
+                height: 0;
+                border-top: 12px solid $blue;
+                border-right: 16px solid transparent;
+                position: relative;
+                z-index: 3;
+                top: 24px;
+                left: 30px;
+            }
+            #chat-triangle-outer {
+                width: 0;
+                height: 0;
+                border-top: 16px solid white;
+                border-right: 20px solid transparent;
+                position: relative;
+                z-index: 2;
+                top: 16px;
+                left: 26px;
+                filter: drop-shadow( 0 2px 6px grey);
+                -webkit-filter: drop-shadow( 0 2px 6px grey);
+}
         }
         #pages {
             width: 480px;
@@ -118,7 +168,7 @@ $border-radius: 3px;
             top: -58px;
             height: 52px;
             z-index: 2;
-            box-shadow: 0px -3px 3px grey;
+            box-shadow: 0px 0px 14px grey;
             border: none;
             margin: 14px;
             @extend %border-radius-hard-bottom;
@@ -129,6 +179,9 @@ $border-radius: 3px;
                 color: grey;
                 left: -300px;
                 display: inline-block;
+                font-family: "Myriad Pro";
+                font-weight: 200;
+                font-size: 16px;
             }
         }
     }
