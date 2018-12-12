@@ -105,7 +105,7 @@ button:hover {
   top: 200px;
   height: 10px;
   width: 100vw;
-  box-shadow: 0px 0px 8px grey, 0px 4px 12px #444444;
+  box-shadow: 0px 0px 8px grey;
 }
 .header #nav-container {
   height: 200px;
@@ -232,7 +232,7 @@ button:hover {
 .main-content #brand-logos {
   background-color: white;
   height: 100px;
-  box-shadow: 0px -4px 4px #666;
+  box-shadow: 0px 0px 12px #666;
 }
 .main-content #brand-logos img {
   height: 60px;
@@ -244,6 +244,7 @@ button:hover {
   height: auto;
   background-image: url("./assets/texture.png");
   padding: 40px 0px;
+  box-shadow: inset 0px 0px 16px #666;
 }
 .main-content #card-section #card-one img, .main-content #card-section #card-two img, .main-content #card-section #card-three img {
   height: 170px;
@@ -358,7 +359,7 @@ button:hover {
   position: absolute;
   top: 170px;
   left: 580px;
-  z-index: 2;
+  z-index: 1;
   padding: 25px;
 }
 .main-content #swiper-bubble-overlay h3 {
@@ -388,26 +389,33 @@ button:hover {
   left: 630px;
   top: 5px;
 }
-.main-content #welcome-text {
-  width: 66%;
+.main-content #welcome-text, .main-content #showroom-links {
   display: inline-block;
-  margin: 20px 0px;
-  color: black;
+  color: #444;
   padding: 5px;
 }
-.main-content #welcome-text h4 {
-  margin: 2px;
+.main-content #welcome-text h4, .main-content #showroom-links h4 {
+  color: #0c6aaa;
+  font-size: 22px;
+  margin: 0;
+}
+.main-content #welcome-text {
+  width: 64%;
 }
 .main-content #showroom-links {
-  padding: 5px 10px 5px 5px;
   width: 30%;
-  display: inline-block;
-  margin: 20px 0px;
-  color: black;
-  border-left: 1px solid #666;
+  color: #444;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 30px;
+  padding-left: 20px;
 }
-.main-content #showroom-links h4 {
-  margin: 2px;
+.main-content #showroom-links a {
+  font-family: "Myriad Pro";
+  font-size: 14px;
+}
+.main-content #showroom-links a:visited {
+  color: #444;
 }
 
 .footer {
