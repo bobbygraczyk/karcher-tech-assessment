@@ -39,6 +39,7 @@ class Main extends Component {
               <h3>JUST ASK.<br />WE'RE HERE<br />TO HELP :)</h3>
               <input type="text" value="START HERE"/>
             </div>
+            <div id="bubble-triangle" />
         </div>
         <div id="brand-logos">
             <div className="content-frame">
