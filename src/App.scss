@@ -144,14 +144,14 @@ $border-radius: 3px;
     height: fit-content;
     background-color: $grey;
     .swiper-frame {
-        height: 500px;
+        height: 400px;
         width: 1000px;
         margin: 0 auto;
         position: relative;
         z-index: 0;
     }
     img {
-        height: 500px;
+        height: 400px;
         width: 1000px;
     }
     #brand-logos {
@@ -165,9 +165,73 @@ $border-radius: 3px;
             display: inline-block;
         }
     }
-    #cards {
-        height: 300px;
+    #card-section {
+        height: auto;
         background-image: url('./assets/texture.png');
+        padding: 40px 0px;
+        .card {
+            display: inline-block;
+            height: 180px;
+            width: 220px;
+            background-color: white;
+            @extend %border-radius;
+            box-shadow: 0px 0px 5px $grey;
+            margin: 0px 20px;
+            img {
+                height: 170px;
+                width: 210px;
+                margin: 5px;
+            }
+        }
+    }
+    #swiper-text-overlay {
+        color: white;
+        position: absolute;
+        margin: 0 auto;
+        width: fit-content;
+        top: 50px;
+        left: 250px;
+        z-index: 2;
+        button {
+            border: 2px solid white;
+            @extend %border-radius;
+            background-color: $blue;
+            color: white;
+        }
+    }
+    #swiper-bubble-overlay {
+        border: 2px solid white;
+        @extend %border-radius;
+        background-color: $blue;
+        color: white;
+        height: 180px;
+        width: 200px;
+        position: absolute;
+        top: 220px;
+        left: 650px;
+        z-index: 2;
+        text-align: center;
+    }
+    #welcome-text {
+        width: 66%;
+        display: inline-block;
+        margin: 20px 0px;
+        color: black;
+        padding: 5px;
+        h4 {
+            margin: 2px;
+        }
+    }
+    #showroom-links {
+        padding: 5px 10px 5px 5px;
+        width: 30%;
+        display: inline-block;
+        margin: 20px 0px;
+        color: black;
+        border-left: 1px solid $grey;
+        h4 {
+            margin: 2px;
+        }
     }
 }
 

@@ -1,4 +1,4 @@
-.header #nav-container #search {
+.main-content #swiper-bubble-overlay, .main-content #swiper-text-overlay button, .main-content #card-section .card, .header #nav-container #search {
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -135,14 +135,14 @@
   background-color: #666;
 }
 .main-content .swiper-frame {
-  height: 500px;
+  height: 400px;
   width: 1000px;
   margin: 0 auto;
   position: relative;
   z-index: 0;
 }
 .main-content img {
-  height: 500px;
+  height: 400px;
   width: 1000px;
 }
 .main-content #brand-logos {
@@ -156,9 +156,70 @@
   margin: 20px 27px;
   display: inline-block;
 }
-.main-content #cards {
-  height: 300px;
+.main-content #card-section {
+  height: auto;
   background-image: url("./assets/texture.png");
+  padding: 40px 0px;
+}
+.main-content #card-section .card {
+  display: inline-block;
+  height: 180px;
+  width: 220px;
+  background-color: white;
+  box-shadow: 0px 0px 5px #666;
+  margin: 0px 20px;
+}
+.main-content #card-section .card img {
+  height: 170px;
+  width: 210px;
+  margin: 5px;
+}
+.main-content #swiper-text-overlay {
+  color: white;
+  position: absolute;
+  margin: 0 auto;
+  width: fit-content;
+  top: 50px;
+  left: 250px;
+  z-index: 2;
+}
+.main-content #swiper-text-overlay button {
+  border: 2px solid white;
+  background-color: #249be0;
+  color: white;
+}
+.main-content #swiper-bubble-overlay {
+  border: 2px solid white;
+  background-color: #249be0;
+  color: white;
+  height: 180px;
+  width: 200px;
+  position: absolute;
+  top: 220px;
+  left: 650px;
+  z-index: 2;
+  text-align: center;
+}
+.main-content #welcome-text {
+  width: 66%;
+  display: inline-block;
+  margin: 20px 0px;
+  color: black;
+  padding: 5px;
+}
+.main-content #welcome-text h4 {
+  margin: 2px;
+}
+.main-content #showroom-links {
+  padding: 5px 10px 5px 5px;
+  width: 30%;
+  display: inline-block;
+  margin: 20px 0px;
+  color: black;
+  border-left: 1px solid #666;
+}
+.main-content #showroom-links h4 {
+  margin: 2px;
 }
 
 .footer {
