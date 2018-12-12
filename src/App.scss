@@ -3,6 +3,7 @@ $dark-grey: #313131;
 $blue: #249be0;
 $dark-blue: #0c6aaa;
 $border-radius: 8px;
+$border-radius-slim: 4px;
 $gradient: linear-gradient($blue, $dark-blue);
 
 %border-radius {
@@ -11,6 +12,14 @@ $gradient: linear-gradient($blue, $dark-blue);
     -moz-border-radius: $border-radius;
     -ms-border-radius: $border-radius;
     -o-border-radius: $border-radius;
+}
+
+%border-radius-slim {
+    border-radius: $border-radius-slim;
+    -webkit-border-radius: $border-radius-slim;
+    -moz-border-radius: $border-radius-slim;
+    -ms-border-radius: $border-radius-slim;
+    -o-border-radius: $border-radius-slim;
 }
 
 %border-radius-hard-right {
@@ -37,6 +46,27 @@ $gradient: linear-gradient($blue, $dark-blue);
     -o-border-radius: 3px 3px 0px 0px;
 }
 
+%card-common {
+    display: inline-block;
+    height: 170px;
+    width: 210px;
+    background-color: white;
+    @extend %border-radius;
+    box-shadow: 0px 0px 12px $grey;
+    margin: 0px 20px;
+    border: 5px solid white;
+    overflow: hidden;
+}
+
+%button-common {
+    border: 2px solid white;
+    background-image: $gradient;
+    @extend %border-radius-slim;
+    color: white;
+    font-family: "Myriad Pro";
+    box-shadow: 2px 2px 8px $dark-grey;
+}
+
 .float-left {
     float: left;
     position: absolute;
@@ -50,6 +80,10 @@ body {
     font-family: "Candara";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .header {
@@ -223,19 +257,92 @@ body {
         height: auto;
         background-image: url('./assets/texture.png');
         padding: 40px 0px;
-        .card {
-            display: inline-block;
-            height: 180px;
-            width: 220px;
-            background-color: white;
-            @extend %border-radius;
-            box-shadow: 0px 0px 5px $grey;
-            margin: 0px 20px;
+        #card-one, #card-two, #card-three {
+            @extend %card-common;
             img {
                 height: 170px;
                 width: 210px;
-                margin: 5px;
             }
+        }
+        #card-one, #card-three {
+            h3 {
+                position: relative;
+                z-index: 4;
+                top: -184px;
+                width: 210px;
+                text-align: center;
+                font-size: 24px;
+                line-height: 1;
+            }
+            button {
+                @extend %button-common;
+                position: relative;
+                top: -200px;
+                z-index: 4;
+                left: 46px;
+                width: 120px;
+                height: 26px;
+                font-size: 12px;
+                letter-spacing: 1px;
+                font-weight: 100;
+            }
+        }
+        #card-one {
+            text-shadow: 0px 0px 12px $dark-grey;
+        }
+        #card-two {
+            background-color: #eee3b9;
+            img {
+                position: relative;
+                top: -130px;
+                height: 170px;
+                width: 120px;
+                left: 100px;
+            }
+            h3 {
+                position: relative;
+                z-index: 4;
+                width: 210px;
+                text-align: left;
+                font-size: 24px;
+                line-height: 1;
+                color: $grey;
+                margin: 16px;
+                background-color: rgba(0, 0, 0, 0);
+            }
+            button {
+                @extend %button-common;
+                position: relative;
+                top: -200px;
+                z-index: 4;
+                margin: 16px;
+                width: 120px;
+                height: 26px;
+            }
+        }
+        #card-three {
+            color: $grey;
+        }
+        #card-one-gradient {
+            height: 120px;
+            width: 210px;
+            background-image: linear-gradient(rgba(204, 196, 183, 1) 50%, rgba(204, 196, 183, 0) 100%);
+            position: absolute;
+            z-index: 3;
+        }
+        #card-two-gradient {
+            height: 170px;
+            width: 210px;
+            background-image: radial-gradient(circle at 180px 70px, rgba(238, 227, 184, 0) 30%, rgba(238, 227, 184, 1) 40%);
+            position: absolute;
+            z-index: 3;
+        }
+        #card-three-gradient {
+            height: 120px;
+            width: 210px;
+            background-image: linear-gradient(rgba(238, 227, 184, 0.5) 20%, rgba(204, 196, 183, 0) 100%);
+            position: absolute;
+            z-index: 3;
         }
     }
     #swiper-text-overlay {
@@ -247,10 +354,7 @@ body {
         left: 200px;
         z-index: 2;
         button {
-            border: 3px solid white;
-            @extend %border-radius;
-            background-image: $gradient;
-            color: white;
+            @extend %button-common;
             margin-top: 10px;
             height: 40px;
             width: 170px;

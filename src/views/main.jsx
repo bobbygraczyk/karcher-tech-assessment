@@ -8,6 +8,8 @@ import symmons from '../assets/symmons.png';
 import elkay from '../assets/elkay.png';
 import texture from '../assets/texture.png';
 import card1 from '../assets/card1.jpg';
+import card2 from '../assets/card2.png';
+import card3 from '../assets/card3.jpg';
 import '../App.css';
 
 class Main extends Component {
@@ -51,14 +53,23 @@ class Main extends Component {
         </div>
         <div id="card-section">
           <div className="content-frame">
-            <div className="card">
+            <div id="card-one">
+              <div id="card-one-gradient" />
               <img src={card1} />
+              <h3>VISIT OUR NEW<br />SHOWROOM</h3>
+              <button>COME ON IN</button>
             </div>
-            <div className="card">
-              <img src={card1} />
+            <div id="card-two">
+              <div id="card-two-gradient" />
+              <h3>CREATE THE<br />PERFECT<br />KITCHEN<br />TRIANGLE</h3>
+              <img src={card2} />
+              <button>FIND OUT WHY</button>
             </div>
-            <div className="card">
-              <img src={card1} />          
+            <div id="card-three">
+              <div id="card-three-gradient" />
+              <img src={card3} />
+              <h3>WE HAVE YOUR<br />DREAM BATH</h3>
+              <button>FIND IT HERE</button>   
             </div>
             <div id="welcome-text">
               <h4>Welcome to Cleveland Plumbing Supply</h4><br />
