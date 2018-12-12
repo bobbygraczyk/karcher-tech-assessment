@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+#Hi, Karcher Group Devs!
+
+## Initialization
+
+1) Run `npm install` from the root directory
+2) Run `sass --watch ./src/App.scss ./src/App.css` to edit Sass
+
 ## Available Scripts
 
 In the project directory, you can run:

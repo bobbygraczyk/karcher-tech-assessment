@@ -7,489 +7,550 @@ $border-radius-slim: 4px;
 $gradient: linear-gradient($blue, $dark-blue);
 
 %border-radius {
-    border-radius: $border-radius;
-    -webkit-border-radius: $border-radius;
-    -moz-border-radius: $border-radius;
-    -ms-border-radius: $border-radius;
-    -o-border-radius: $border-radius;
+  border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -ms-border-radius: $border-radius;
+  -o-border-radius: $border-radius;
 }
 
 %border-radius-slim {
-    border-radius: $border-radius-slim;
-    -webkit-border-radius: $border-radius-slim;
-    -moz-border-radius: $border-radius-slim;
-    -ms-border-radius: $border-radius-slim;
-    -o-border-radius: $border-radius-slim;
+  border-radius: $border-radius-slim;
+  -webkit-border-radius: $border-radius-slim;
+  -moz-border-radius: $border-radius-slim;
+  -ms-border-radius: $border-radius-slim;
+  -o-border-radius: $border-radius-slim;
 }
 
 %border-radius-hard-right {
-    border-radius: 3px 0px 0px 3px;
-    -webkit-border-radius: 3px 0px 0px 3px;
-    -moz-border-radius: 3px 0px 0px 3px;
-    -ms-border-radius: 3px 0px 0px 3px;
-    -o-border-radius: 3px 0px 0px 3px;
+  border-radius: 3px 0px 0px 3px;
+  -webkit-border-radius: 3px 0px 0px 3px;
+  -moz-border-radius: 3px 0px 0px 3px;
+  -ms-border-radius: 3px 0px 0px 3px;
+  -o-border-radius: 3px 0px 0px 3px;
 }
 
 %border-radius-hard-left {
-    border-radius: 0px 3px 3px 0px;
-    -webkit-border-radius: 0px 3px 3px 0px;
-    -moz-border-radius: 0px 3px 3px 0px;
-    -ms-border-radius: 0px 3px 3px 0px;
-    -o-border-radius: 0px 3px 3px 0px;
+  border-radius: 0px 3px 3px 0px;
+  -webkit-border-radius: 0px 3px 3px 0px;
+  -moz-border-radius: 0px 3px 3px 0px;
+  -ms-border-radius: 0px 3px 3px 0px;
+  -o-border-radius: 0px 3px 3px 0px;
 }
 
 %border-radius-hard-bottom {
-    border-radius: 3px 3px 0px 0px;
-    -webkit-border-radius: 3px 3px 0px 0px;
-    -moz-border-radius: 3px 3px 0px 0px;
-    -ms-border-radius: 3px 3px 0px 0px;
-    -o-border-radius: 3px 3px 0px 0px;
+  border-radius: 3px 3px 0px 0px;
+  -webkit-border-radius: 3px 3px 0px 0px;
+  -moz-border-radius: 3px 3px 0px 0px;
+  -ms-border-radius: 3px 3px 0px 0px;
+  -o-border-radius: 3px 3px 0px 0px;
 }
 
 %card-common {
-    display: inline-block;
-    height: 170px;
-    width: 210px;
-    background-color: white;
-    @extend %border-radius;
-    box-shadow: 0px 0px 12px $grey;
-    margin: 0px 20px;
-    border: 5px solid white;
-    overflow: hidden;
+  display: inline-block;
+  height: 170px;
+  width: 210px;
+  background-color: white;
+  @extend %border-radius;
+  box-shadow: 0px 0px 12px $grey;
+  margin: 0px 20px;
+  border: 5px solid white;
+  overflow: hidden;
 }
 
 %button-common {
-    border: 2px solid white;
-    background-image: $gradient;
-    @extend %border-radius-slim;
-    color: white;
-    font-family: "Myriad Pro";
-    box-shadow: 2px 2px 8px $dark-grey;
+  border: 2px solid white;
+  background-image: $gradient;
+  @extend %border-radius-slim;
+  color: white;
+  font-family: "Myriad Pro";
+  box-shadow: 2px 2px 8px $dark-grey;
+  z-index: 10;
+}
+
+%button-anim {
+  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: translate(1px, 1px);
+    -webkit-transform: translate(1px, 1px);
+    -moz-transform: translate(1px, 1px);
+    -ms-transform: translate(1px, 1px);
+    -o-transform: translate(1px, 1px);
+  }
 }
 
 .float-left {
-    float: left;
-    position: absolute;
+  float: left;
+  position: absolute;
 }
 
 .float-right {
-    float: right;
+  float: right;
 }
 
 body {
-    font-family: "Candara";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: "Candara";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .header {
+  width: 100vw;
+  height: 200px;
+  background-image: url("./assets/circle_pattern.png");
+  overflow: hidden;
+  margin-bottom: 10px;
+  #top-bar {
+    background-color: $grey;
+    height: 40px;
     width: 100vw;
+    box-shadow: 0px 0px 8px $grey;
+    h4,
+    h3 {
+      margin: 10px 0px 0px 0px;
+      font-size: 18px;
+      font-family: "Myriad Pro";
+      font-weight: 200;
+    }
+    h3 {
+      color: $blue;
+      font-size: 24px;
+      font-weight: 200;
+    }
+  }
+  #bottom-border {
+    position: absolute;
+    z-index: 1;
+    top: 200px;
+    height: 10px;
+    width: 100vw;
+    box-shadow: 0px 0px 8px grey;
+  }
+  #nav-container {
     height: 200px;
-    background-image: url('./assets/circle_pattern.png');
-    overflow: hidden;
-    margin-bottom: 10px;
-    #top-bar {
-        background-color: $grey;
-        height: 40px;
-        width: 100vw;
-        h4, h3 {
-            margin: 10px 0px 0px 0px;
-            font-size: 18px;
-            font-weight: 200;
-        }
-        h3 {
-            color: $blue;
-            font-family: "Myriad Pro";
-            font-size: 24px;
-            font-weight: 200;
-        }
+    img {
+      margin: 12px;
+      float: left;
     }
-    #bottom-border {
-        position: absolute;
-        z-index: 1;
-        top: 200px;
-        height: 10px;
-        width: 100vw;
-        box-shadow: 0px 0px 8px grey;
+    #quick-links {
+      color: $grey;
+      float: right;
+      position: relative;
+      padding: 10px;
+      margin-top: 12px;
+      button {
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        font-family: "Myriad Pro";
+        font-size: 16px;
+        font-weight: 100;
+        letter-spacing: 1px;
+        color: $grey;
+        transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        &:hover {
+          color: black;
+        }
+      }
     }
-    #nav-container {
-        height: 200px;
-        img {
-            margin: 12px;
-            float: left;
-        }
-        #quick-links {
-            color: $grey;
-            float: right;
-            position: relative;
-            padding: 10px;
-            margin-top: 12px;
-            button {
-                background-color: rgba(0, 0, 0, 0);
-                border: none;
-                font-family: "Myriad Pro";
-                font-size: 16px;
-                font-weight: 100;
-                letter-spacing: 1px;
-                color: $grey;
-            }
-        }
-        #search {
-            @extend %border-radius;
-            background-color: white;
-            box-shadow: 0px 0px 3px grey;
-            height: 26px;
-            width: 320px;
-            float: right;
-            padding: 4px;
-            margin: 4px 16px;
-            input {
-                @extend %border-radius-hard-right;
-                width: 236px;
-                height: 22px;
-                background-color: $blue;
-                color: white;
-                border: none;
-                float: left;
-                position: relative;
-                padding-left: 4px;
-                font-family: "Myriad Pro";
-                font-size: 16px;
-            }
-            button {
-                border: none;
-                width: 80px;
-                height: 24px;
-                background-color: $dark-blue;
-                @extend %border-radius-hard-left;
-                position: relative;
-                color: rgb(95, 183, 255);
-                float: right;
-                font-family: "Myriad Pro";
-                padding-top: 2px;
-            }
-            #chat-triangle-inner {
-                width: 0;
-                height: 0;
-                border-top: 12px solid $blue;
-                border-right: 16px solid transparent;
-                position: relative;
-                z-index: 3;
-                top: 24px;
-                left: 30px;
-            }
-            #chat-triangle-outer {
-                width: 0;
-                height: 0;
-                border-top: 16px solid white;
-                border-right: 20px solid transparent;
-                position: relative;
-                z-index: 2;
-                top: 16px;
-                left: 26px;
-                filter: drop-shadow( 0 2px 6px grey);
-                -webkit-filter: drop-shadow( 0 2px 6px grey);
-}
-        }
-        #pages {
-            width: 480px;
-            background-color: white;
-            position: relative;
-            float: right;
-            top: -58px;
-            height: 52px;
-            z-index: 2;
-            box-shadow: 0px 0px 14px grey;
-            border: none;
-            margin: 14px;
-            @extend %border-radius-hard-bottom;
-            button {
-                background-color: rgba(0, 0, 0, 0);
-                border: none;
-                margin: 16px 5px;
-                color: grey;
-                left: -300px;
-                display: inline-block;
-                font-family: "Myriad Pro";
-                font-weight: 200;
-                font-size: 16px;
-            }
-        }
+    #search {
+      @extend %border-radius;
+      background-color: white;
+      box-shadow: 0px 0px 3px grey;
+      height: 24px;
+      width: 400px;
+      float: right;
+      padding: 4px;
+      margin: 4px 16px;
+      input {
+        @extend %border-radius-hard-right;
+        width: 316px;
+        height: 22px;
+        background-color: $blue;
+        color: white;
+        border: none;
+        float: left;
+        position: relative;
+        padding-left: 4px;
+        font-family: "Myriad Pro";
+        font-size: 14px;
+      }
+      button {
+        border: none;
+        width: 80px;
+        height: 24px;
+        background-color: $dark-blue;
+        @extend %border-radius-hard-left;
+        position: relative;
+        color: rgb(95, 183, 255);
+        float: right;
+        font-family: "Myriad Pro";
+        padding-top: 2px;
+      }
+      #chat-triangle-inner {
+        width: 0;
+        height: 0;
+        border-top: 12px solid $blue;
+        border-right: 16px solid transparent;
+        position: relative;
+        z-index: 3;
+        top: 24px;
+        left: 30px;
+      }
+      #chat-triangle-outer {
+        width: 0;
+        height: 0;
+        border-top: 16px solid white;
+        border-right: 20px solid transparent;
+        position: relative;
+        z-index: 2;
+        top: 16px;
+        left: 26px;
+        filter: drop-shadow(0 6px 8px grey);
+        -webkit-filter: drop-shadow(0 6px 8px grey);
+      }
     }
+    #pages {
+      width: 600px;
+      background-color: white;
+      position: relative;
+      float: right;
+      height: 52px;
+      z-index: 2;
+      box-shadow: 0px 0px 14px grey;
+      border: none;
+      margin: 14px;
+      @extend %border-radius-hard-bottom;
+      button {
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        margin: 20px 16px;
+        color: grey;
+        left: -300px;
+        display: inline-block;
+        font-family: "Myriad Pro";
+        font-weight: 200;
+        font-size: 16px;
+        transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        &:hover {
+          color: black;
+        }
+      }
+      button:first-child {
+        margin-left: 32px;
+      }
+    }
+  }
 }
 
 .content-frame {
-    width: 800px;
-    margin: 0 auto;
-    color: white;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  color: white;
 }
 
 .main-content {
-    height: fit-content;
-    background-color: $grey;
-    .swiper-frame {
-        height: 400px;
-        width: 1000px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 0; 
-    }
+  height: fit-content;
+  background-color: $grey;
+  .swiper-frame {
+    height: 400px;
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+  }
+  img {
+    height: 400px;
+    width: auto;
+  }
+  #brand-logos {
+    background-color: white;
+    height: 100px;
+    box-shadow: 0px 0px 12px $grey;
     img {
-        height: 400px;
-        width: 1000px;
+      height: auto;
+      width: 160px;
+      margin: 0px 44px;
+      display: inline-block;
     }
-    #brand-logos {
-        background-color: white;
-        height: 100px;
-        box-shadow: 0px 0px 12px $grey;
-        img {
-            height: 60px;
-            width: auto;
-            margin: 20px 27px;
-            display: inline-block;
-        }
+  }
+  #card-section {
+    height: auto;
+    background-image: url("./assets/texture.png");
+    padding: 40px 0px;
+    box-shadow: inset 0px 2px 8px $grey;
+    #card-one,
+    #card-two,
+    #card-three {
+      @extend %card-common;
+      width: 280px;
+      height: 240px;
+      img {
+        height: 100%;
+        width: auto;
+      }
     }
-    #card-section {
-        height: auto;
-        background-image: url('./assets/texture.png');
-        padding: 40px 0px;
-        box-shadow: inset 0px 2px 8px $grey;
-        #card-one, #card-two, #card-three {
-            @extend %card-common;
-            img {
-                height: 170px;
-                width: 210px;
-            }
-        }
-        #card-one, #card-three {
-            h3 {
-                position: relative;
-                z-index: 4;
-                top: -184px;
-                width: 210px;
-                text-align: center;
-                font-size: 24px;
-                line-height: 1;
-            }
-            button {
-                @extend %button-common;
-                position: relative;
-                top: -200px;
-                z-index: 4;
-                left: 46px;
-                width: 120px;
-                height: 26px;
-                font-size: 12px;
-                letter-spacing: 1px;
-                font-weight: 100;
-            }
-        }
-        #card-one {
-            text-shadow: 0px 0px 12px $dark-grey;
-        }
-        #card-two {
-            background-color: #eee3b9;
-            img {
-                position: relative;
-                top: -130px;
-                height: 170px;
-                width: 120px;
-                left: 100px;
-            }
-            h3 {
-                position: relative;
-                z-index: 4;
-                width: 210px;
-                text-align: left;
-                font-size: 24px;
-                line-height: 1;
-                color: $grey;
-                margin: 16px;
-                background-color: rgba(0, 0, 0, 0);
-            }
-            button {
-                @extend %button-common;
-                position: relative;
-                top: -200px;
-                z-index: 4;
-                margin: 16px;
-                width: 120px;
-                height: 26px;
-            }
-        }
-        #card-three {
-            color: $grey;
-        }
-        #card-one-gradient {
-            height: 120px;
-            width: 210px;
-            background-image: linear-gradient(rgba(204, 196, 183, 1) 50%, rgba(204, 196, 183, 0) 100%);
-            position: absolute;
-            z-index: 3;
-        }
-        #card-two-gradient {
-            height: 170px;
-            width: 210px;
-            background-image: radial-gradient(circle at 180px 70px, rgba(238, 227, 184, 0) 30%, rgba(238, 227, 184, 1) 40%);
-            position: absolute;
-            z-index: 3;
-        }
-        #card-three-gradient {
-            height: 120px;
-            width: 210px;
-            background-image: linear-gradient(rgba(238, 227, 184, 0.5) 20%, rgba(204, 196, 183, 0) 100%);
-            position: absolute;
-            z-index: 3;
-        }
-    }
-    #swiper-text-overlay {
-        color: white;
-        position: absolute;
-        margin: 0 auto;
-        width: fit-content;
-        top: 30px;
-        left: 200px;
-        z-index: 2;
-        button {
-            @extend %button-common;
-            margin-top: 10px;
-            height: 40px;
-            width: 170px;
-            font-size: 18px;
-            font-family: "Myriad Pro";
-            letter-spacing: 1px;
-        }
-        h2 {
-            font-size: 42px;
-            font-weight: 100;
-            text-shadow: 0px 0px 12px $grey;
-            margin: 0;
-            line-height: 1;
-        }
-    }
-    #swiper-bubble-overlay {
-        border: 5px solid white;
-        @extend %border-radius;
-        background-image: $gradient;
-        color: white;
-        height: 180px;
-        width: 210px;
-        position: absolute;
-        top: 170px;
-        left: 580px;
-        z-index: 1;
-        padding: 25px;
-        h3 {
-            margin: 0px;
-            font-size: 36px;
-            line-height: 1.1;
-        }
-        input {
-            margin-top: 10px;
-            font-family: "Candara";
-            font-weight: 200;
-            height: 36px;
-            width: 210px;
-            @extend %border-radius;
-            text-align: center;
-            font-size: 24px;
-            color: $grey;
-            border: none;
-            box-shadow: inset 2px 2px 12px $grey;
-        }
-    }
-    #bubble-triangle {
-        width: 0;
-        height: 0;
-        border-top: 36px solid $dark-blue;
-        border-right: 60px solid transparent;
+    #card-one,
+    #card-three {
+      h3 {
         position: relative;
-        z-index: 3;
-        left: 630px;
-        top: 5px;
-    }
-    #welcome-text, #showroom-links {
-        display: inline-block;
-        color: #444;
-        padding: 5px;
-        margin-top: 20px;
-        h4 {
-            color: $dark-blue;
-            font-size: 22px;
-            margin: 0;
-        }
-    }
-    #welcome-text {
-        width: 64%;
-        margin-left: 14px;
-    }
-    #showroom-links {
-        width: 28%;
-        color: #444;
-        border-left: 1px solid rgba(0, 0, 0, 0.2);
-        position: relative;
-        top: 6px;
-        padding-left: 20px;
+        z-index: 4;
+        top: -244px;
+        width: 280px;
+        text-align: center;
+        font-size: 32px;
         line-height: 1;
-        a {
-            font-family: "Myriad Pro";
-            font-size: 14px;
-        }
-        a:visited {
-            color: #444;
-        }
+      }
+      button {
+        @extend %button-common;
+        @extend %button-anim;
+        position: relative;
+        top: -270px;
+        z-index: 4;
+        left: 82px;
+        width: 120px;
+        height: 32px;
+        font-size: 16px;
+        font-weight: 100;
+      }
     }
+    #card-one {
+      text-shadow: 0px 0px 12px $dark-grey;
+    }
+    #card-two {
+      background-color: #eee3b9;
+      img {
+        position: relative;
+        top: -200px;
+        height: 240px;
+        width: 160px;
+        left: 120px;
+      }
+      h3 {
+        position: relative;
+        z-index: 4;
+        width: 210px;
+        text-align: left;
+        font-size: 32px;
+        line-height: 1;
+        color: $grey;
+        margin: 32px;
+        background-color: rgba(0, 0, 0, 0);
+      }
+      button {
+        @extend %button-common;
+        @extend %button-anim;
+        position: relative;
+        top: -280px;
+        z-index: 4;
+        margin: 16px 30px;
+        width: 120px;
+        height: 32px;
+        font-size: 16px;
+      }
+    }
+    #card-three {
+      color: $grey;
+    }
+    #card-one-gradient {
+      height: 120px;
+      width: 280px;
+      background-image: linear-gradient(
+        rgba(204, 196, 183, 1) 50%,
+        rgba(204, 196, 183, 0) 100%
+      );
+      position: absolute;
+      z-index: 3;
+    }
+    #card-two-gradient {
+      height: 240px;
+      width: 280px;
+      background-image: radial-gradient(
+        circle at 220px 100px,
+        rgba(238, 227, 184, 0) 30%,
+        rgba(238, 227, 184, 1) 40%
+      );
+      position: absolute;
+      z-index: 3;
+    }
+    #card-three-gradient {
+      height: 240px;
+      width: 280px;
+      background-image: linear-gradient(
+        rgba(238, 227, 184, 0.5) 20%,
+        rgba(204, 196, 183, 0) 100%
+      );
+      position: absolute;
+      z-index: 3;
+    }
+  }
+  #swiper-text-overlay {
+    color: white;
+    position: absolute;
+    margin: 0 auto;
+    width: fit-content;
+    top: 30px;
+    left: 200px;
+    z-index: 2;
+    button {
+      @extend %button-common;
+      @extend %button-anim;
+      margin-top: 10px;
+      height: 40px;
+      width: 170px;
+      font-size: 18px;
+      font-family: "Myriad Pro";
+      letter-spacing: 1px;
+    }
+    h2 {
+      font-size: 42px;
+      font-weight: 100;
+      text-shadow: 0px 0px 12px $grey;
+      margin: 0;
+      line-height: 1;
+    }
+  }
+  #swiper-bubble-overlay {
+    border: 5px solid white;
+    @extend %border-radius;
+    background-image: $gradient;
+    color: white;
+    height: 180px;
+    width: 210px;
+    position: absolute;
+    top: 170px;
+    left: 660px;
+    z-index: 1;
+    padding: 25px;
+    h3 {
+      margin: 0px;
+      font-size: 36px;
+      line-height: 1.1;
+    }
+    input {
+      margin-top: 10px;
+      font-family: "Candara";
+      font-weight: 200;
+      height: 36px;
+      width: 210px;
+      @extend %border-radius;
+      text-align: center;
+      font-size: 24px;
+      color: $grey;
+      border: none;
+      box-shadow: inset 2px 2px 12px $grey;
+    }
+  }
+  #bubble-triangle {
+    width: 0;
+    height: 0;
+    border-top: 36px solid $dark-blue;
+    border-right: 60px solid transparent;
+    position: relative;
+    z-index: 3;
+    left: 720px;
+    top: 5px;
+  }
+  #welcome-text,
+  #showroom-links {
+    display: inline-block;
+    color: #444;
+    padding: 5px;
+    margin-top: 20px;
+    h4 {
+      color: $dark-blue;
+      font-size: 22px;
+      margin: 0;
+    }
+  }
+  #welcome-text {
+    width: 72%;
+    margin-left: 14px;
+  }
+  #showroom-links {
+    color: #444;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 6px;
+    padding-left: 20px;
+    line-height: 1;
+    a {
+      font-family: "Myriad Pro";
+      font-size: 14px;
+    }
+    a:visited {
+      color: #444;
+    }
+  }
 }
 
 .footer {
-    height: 320px;
-    background-color: $dark-grey;
-    width: 100vw;
-    color: white;
-    #footer-banner {
-        height: 60px;
-        background-color: #157ec0;
-        background-image: url('./assets/circle_pattern.png');
-        background-position: 0px -10px;
-        box-shadow: inset 0px 2px 12px $dark-grey;
-        h2 {
-            margin: 0;
-            position: relative;
-            top: 10px;
-            font-size: 30px;
-        }
+  height: 320px;
+  background-color: $dark-grey;
+  width: 100vw;
+  color: white;
+  #footer-banner {
+    height: 60px;
+    background-color: #157ec0;
+    background-image: url("./assets/circle_pattern.png");
+    background-position: 0px -10px;
+    box-shadow: inset 0px 2px 12px $dark-grey;
+    h2 {
+      margin: 0;
+      position: relative;
+      top: 10px;
+      font-size: 30px;
     }
-    #tag {
-        margin: 32px 0px;
-        font-family: "Arial";
-        font-size: 12px;
-        width: fit-content;
-        display: inline-block;
+  }
+  #tag {
+    margin: 32px 0px;
+    font-family: "Arial";
+    font-size: 12px;
+    width: fit-content;
+    display: inline-block;
+  }
+  #company-links,
+  #manufacturer-links {
+    width: 160px;
+    float: right;
+    margin: 32px 0px;
+    font-family: "Arial";
+    font-size: 12px;
+    table {
+      border-collapse: collapse;
+      margin-top: 8px;
+      width: 120px;
     }
-    #company-links, #manufacturer-links {
-        width: 160px;
-        float: right;
-        margin: 32px 0px;
-        font-family: "Arial";
-        font-size: 12px;
-        table { 
-            border-collapse: collapse; 
-            margin-top: 8px;
-            width: 120px;
-        }
-        tr {
-            height: 26px;
-            border-bottom: 1px dotted white;
-        }
-        small {
-            font-size: 12px;
-        }
-        a:visited {
-            color: white;
-        }
+    tr {
+      height: 26px;
+      border-bottom: 1px dotted white;
     }
+    small {
+      font-size: 12px;
+    }
+    a:visited {
+      color: white;
+    }
+  }
 }
